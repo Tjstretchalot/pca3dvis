@@ -101,8 +101,18 @@ class ProjectedRenderer(acts.ActRenderer):
         """Returns a matplotlib figure with the state on it"""
         fig = plt.figure(figsize=self.frame_size_in)
         ax = fig.add_subplot(111, projection='3d')
+
         axtitle = ax.set_title(act_state.title)
-        axtitle.set_fontsize(int((80 / 1920) * self._frame_size[0]))
+
+        font_size = int((80 / 1920) * self._frame_size[0])
+        axtitle.set_fontsize(font_size)
+
+        renderer = fig.canvas.get_renderer()
+        bb = axtitle.get_window_extent(renderer=renderer)
+        while bb.width >= self._frame_size[0] * 0.9:
+            font_size -= 5
+            axtitle.set_fontsize(font_size)
+            bb = axtitle.get_window_extent(renderer=renderer)
 
         for pts, mask, skwargs in act_state.visible_points:
             tus.check(skwargs=(skwargs, dict))
