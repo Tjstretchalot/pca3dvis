@@ -176,7 +176,7 @@ def _cluster_scene(my_scene, traj, snap_ind, title, draft):
         inner_zoom = pca3dvis.state.get_square_bounds_for(masked)
 
         (my_scene
-         .push(scenes.FadeScene(0, ~mask, 1, 0)) # FADE OUT UNMASKED
+         .push(scenes.FadeScene(snap_ind, ~mask, 1, 0)) # FADE OUT UNMASKED
          .join(scenes.FixedTitleScene(ctitle), False)
          .join(scenes.FixedRotationScene((30, 45)), False)
          .join(scenes.FixedZoomScene(outer_zoom), False)
@@ -204,7 +204,7 @@ def _cluster_scene(my_scene, traj, snap_ind, title, draft):
          .dilate(pympanim.easing.smoothstep)
          .time_rescale_exact(2, 's')
          .pop()
-         .push(scenes.FadeScene(0, ~mask, 0, 1)) # FADE IN UNMASKED
+         .push(scenes.FadeScene(snap_ind, ~mask, 0, 1)) # FADE IN UNMASKED
          .join(scenes.FixedTitleScene(ctitle), False)
          .join(scenes.FixedRotationScene((30, 45)), False)
          .join(scenes.FixedZoomScene(outer_zoom), False)
