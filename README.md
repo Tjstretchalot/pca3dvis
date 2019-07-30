@@ -22,7 +22,9 @@ This package requires [ffmpeg](https://ffmpeg.org/) to be installed.
 
 ## Example Videos
 
-Coming soon!
+`examples/gaus_balls.py`
+
+https://youtu.be/n9rpWhuN6LA
 
 ## Usage
 
