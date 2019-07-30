@@ -2,6 +2,7 @@
 together.
 """
 import typing
+import matplotlib.pyplot as plt
 import numpy as np
 import os
 import pytypeutils as tus
@@ -81,6 +82,7 @@ def generate(traj: pca3dvis.trajectory.ProjectedTrajectory,
 
             fname = filepath + f'_rot{rot}' + ext
             fig.savefig(fname, transparent=transp, dpi=rend.dpi)
+            plt.close(fig)
 
     pts = traj.snapshots[0].projected_samples
     zoom = pca3dvis.state.get_square_bounds_for(pts)
