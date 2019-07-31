@@ -26,7 +26,13 @@ This package requires [ffmpeg](https://ffmpeg.org/) to be installed.
 
 https://youtu.be/n9rpWhuN6LA
 
+`examples/all_rand.py`
+
+https://www.youtube.com/watch?v=YnIRqSQ8lAU
+
 ## Usage
+
+Video introduction at https://youtu.be/JqfVY9pdxY8
 
 ### Projecting to 3D from higher dimensions
 
