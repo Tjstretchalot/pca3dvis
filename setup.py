@@ -4,7 +4,7 @@ import os
 
 setuptools.setup(
     name='pca3dvis',
-    version='0.0.2',
+    version='0.0.3',
     author='Timothy Moore',
     author_email='mtimothy984@gmail.com',
     description='Visualize 3d matrices or their 3d projections easily',
