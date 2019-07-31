@@ -37,7 +37,7 @@ def get_pcs(mat: np.ndarray, num_pcs: int) -> typing.Tuple[np.ndarray, np.ndarra
     eig_vecs = eig_vecs[:, :num_pcs]
     eig = eig[:num_pcs]
 
-    return eig, eig_vecs
+    return eig.astype(mat.dtype), eig_vecs.astype(mat.dtype)
 
 def get_pc_trajectory(mats: typing.Tuple[np.ndarray], lbls: np.ndarray,
                       num_pcs: int = 3, match: bool = True) -> ProjectedTrajectory:
