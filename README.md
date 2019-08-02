@@ -30,6 +30,10 @@ https://youtu.be/n9rpWhuN6LA
 
 https://www.youtube.com/watch?v=YnIRqSQ8lAU
 
+[ignite-torchluent-example](https://github.com/Tjstretchalot/ignite-torchluent-example)
+
+https://youtu.be/492JWqa_epo
+
 ## Usage
 
 Video introduction at https://youtu.be/JqfVY9pdxY8
